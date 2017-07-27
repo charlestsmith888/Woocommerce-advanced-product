@@ -1,19 +1,28 @@
 <?php 
 
 
-function woocommerce_custom_shortcode( $atts ) {
+function woo_custom_shortcode( $atts ) {
 	$atts = shortcode_atts( array(
-		'category' => 'feature',
+		'category' => '',
 		'count' => '6'
 		), $atts );
 	$content = '';
 	$content .='<div id="wooclass">';
 	$content .='<div class="row">';
-	$args = array(
+
+if (empty($atts['category'])) {
+		$args = array(
+		'post_type' => 'product',
+		'posts_per_page' => $atts['count'],
+		);
+}else{
+		$args = array(
 		'post_type' => 'product',
 		'product_cat' => $atts['category'],
 		'posts_per_page' => $atts['count'],
 		);
+}
+
 	$loop = new WP_Query( $args );
 	if ( $loop->have_posts() ) {
 		$i = 0;
@@ -53,7 +62,7 @@ function woocommerce_custom_shortcode( $atts ) {
 		echo __( 'No products found' );
 	}
 }
-add_shortcode( 'product_custom_shortcode','woocommerce_custom_shortcode' );
+add_shortcode( 'product_custom_shortcode','woo_custom_shortcode' );
 /**
 * Enqueue scripts
 *
@@ -63,12 +72,12 @@ add_shortcode( 'product_custom_shortcode','woocommerce_custom_shortcode' );
 * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
 * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
 */
-function theme_name_scripts() {
+function woo_theme_name_scripts() {
 	wp_enqueue_script( 'feetherPop', WOOASSETS . 'featherlight-master/release/featherlight.min.js', array( 'jquery' ), '1.1', true);
 	wp_enqueue_script( 'bxslider', WOOASSETS . 'bxslider/jquery.bxslider.min.js', array( 'jquery' ), '1.1', true);
 	wp_enqueue_script( 'custom', WOOASSETS . 'bxslider/custom.js', array( 'jquery' ), '1.1', true);
 }
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+add_action( 'wp_enqueue_scripts', 'woo_theme_name_scripts' );
 
 
 
