@@ -17,10 +17,10 @@ This plugin allows you to add personalize product style to any of your site page
 
 
 ##### POPUP OF THE PRODUCT
-(/screenshots/01.jpg?raw=true)
-(/screenshots/01.jpg?raw=true)
-(/screenshots/01.jpg?raw=true)
-(/screenshots/01.jpg?raw=true)
+![Extra fields](/screenshots/01.jpg)
+![Extra fields](/screenshots/01.jpg)
+![Extra fields](/screenshots/01.jpg)
+![Extra fields](/screenshots/01.jpg)
 
 
 ### Overview
