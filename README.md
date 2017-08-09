@@ -1,6 +1,3 @@
-WOOCOMMERCE ADVANCED PRODUCT LAYOUT for WordPress
----------------------
-
 ### WOOCOMMERCE ADVANCED PRODUCT LAYOUT
 <hr>
 
