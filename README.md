@@ -1,5 +1,8 @@
-Sunrise for WordPress
+WOOCOMMERCE ADVANCED PRODUCT LAYOUT for WordPress
 ---------------------
+
+### WOOCOMMERCE ADVANCED PRODUCT LAYOUT
+<hr>
 
 ### Overview
 This plugin allows you to add personalize product style to any of your site page where you can modify your product layout which cater product column functionality through which you can display multiple products, a fancy popup styler which directs you to the description of that product, a background color functionality of the popup and an add to cart button where you can lock your product initially. You can even integrate shortcodes easily anywhere on your site to display the product menu.
