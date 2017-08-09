@@ -71,18 +71,3 @@ This shortcode with the attribute of lunch, if you specified the category as lun
 
 [product_custom_shortcode category="lunch" count="6"]
 This shortcode with the attribute of count, it let you show the 6 products of lunch on the product menu and display it wherever you want.
-
-
-
-
-
-
-
-
-### Screenshots
-
-*Regular fields*
-(/_screenshots/screenshot-1.png?raw=true)
-
-*Extra fields*
-(/_screenshots/screenshot-2.png?raw=true)
