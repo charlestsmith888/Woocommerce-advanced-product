@@ -76,6 +76,39 @@ function woo_set_thumbnail_size_by_post_type( $sizes ) {
 }
 
 
+// Ajax Action start from here
+add_action( 'wp_ajax_woo_addtocart', 'myajax_submit' );
+add_action( 'wp_ajax_nopriv_woo_addtocart', 'myajax_submit' );
+function myajax_submit() {
+	$id = $_POST['proid'];
+	$qty = $_POST['qty'];
+	$product_id = $_POST['proid'];
+	$found = false;
+	if ( sizeof( WC()->cart->get_cart() ) > 0 ) {
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
+			$_product = $values['product_id'];
+			if ( $_product == $product_id ){
+				$found = true;
+				$response = json_encode(array( 'class1' => 'alert-danger', 'msg' => 'Product is already added into cart'));
+			}
+		}
+		if ( !$found){
+			WC()->cart->add_to_cart( $product_id ,$qty);
+			$response = json_encode(array( 'class2' => 'alert-success', 'msg' => 'Product has been added into cart'));
+			}
+	} else {
+		WC()->cart->add_to_cart( $product_id ,$qty);
+		$response = json_encode(array( 'class3' => 'alert-success', 'msg' => 'Product has been added into cart'));
+	}
+	header( "Content-Type: application/json" );
+	echo $response;
+	exit;
+}
+
+
+
+
+
 
 // If Is admin
 if (is_admin()):

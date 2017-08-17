@@ -55,12 +55,20 @@ $product = wc_get_product( $productId );
 	<form class="cartwoo" action="" method="post" enctype="multipart/form-data">
 		<div class="quantity">
 			<input type="button" value="-" class="minuswoo">
-			<input type="number" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
+			<input type="hidden" name="action" value="woo_addtocart">
+			<input type="number" class="input-text qty text" step="1" min="1" max="" name="qty" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
 			<input type="button" value="+" class="pluswoo">
-			<input type="hidden" name="add-to-cart" value="<?php echo $productId; ?>">
+			<input type="hidden" name="proid" value="<?php echo $productId; ?>">
 		</div>
 		<button type="submit" style="border-radius: 3px !important;"><?php echo $product->single_add_to_cart_text(); ?></button>
 	</form>
+
+
+<div class="clearfix"></div>
+<div class="alert woo_addtocart" style="margin-top: 15px;">
+</div>
+
+
 </div>
 </div>
 </div>

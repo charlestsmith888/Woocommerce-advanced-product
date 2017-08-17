@@ -48,7 +48,7 @@ if (empty($atts['category'])) {
 				<div class="col-md-8">
 					<h4 class="eggs-txt">'.get_the_title().'<span>'.$price.'</span></h4>
 					<p>'.substr(get_the_content(), 0 , woo_get_option('text-count')).' <a href="#" data-featherlight="'.WOOURL.'pop.php?id='.get_the_ID().'">'.woo_get_option('popupbtn').'</a></p>
-					<a class="cartbtn" href="?add-to-cart='.get_the_ID().'">add to cart</a>
+					<a class="cartbtn" data-proid="'.get_the_ID().'" href="javascript:;">add to cart</a>
 				</div>
 			</div>
 		</div>
