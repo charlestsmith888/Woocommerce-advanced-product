@@ -72,3 +72,5 @@ $product = wc_get_product( $productId );
 </div>
 </div>
 </div>
+
+<?php  ?>
