@@ -52,13 +52,7 @@
 		</tr> -->
 	</table>
 	<p class="submit" style="text-align:left"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
-</form>	
-
-
-
-
-
-
+</form>
 <form method="post" action="options.php" enctype="multipart/form-data">
 	<?php settings_fields( 'woo-pop-up-settings-group' ); ?>
 	<h2>Popup Setting</h2>
@@ -89,27 +83,15 @@
 		</tr> -->
 	</table>
 	<p class="submit" style="text-align:left"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
-</form>	
-
-
-
-
-
-
-
+</form>
 <div class="container">
-<div class="row">
+	<div class="row">
 		<h2 id="shortcode">How to use</h2>
-<fieldset class="woo_fieldset">
-	<legend><h4 class="sec-title">Using Shortcode</h4></legend>
-	<p>You just need to put the shortcode wherever you want <code>[product_custom_shortcode]</code></p>
-	<p>If you want product from specific category you can use<code>[product_custom_shortcode category="lunch"]</code></p>
-	<p>If you want product count you can use <code>[product_custom_shortcode category="lunch" count="6"]</code></p>
-</fieldset>
+		<fieldset class="woo_fieldset">
+			<legend><h4 class="sec-title">Using Shortcode</h4></legend>
+			<p>You just need to put the shortcode wherever you want <code>[product_custom_shortcode]</code></p>
+			<p>If you want product from specific category you can use<code>[product_custom_shortcode category="lunch"]</code></p>
+			<p>If you want product count you can use <code>[product_custom_shortcode category="lunch" count="6"]</code></p>
+		</fieldset>
+	</div>
 </div>
-</div>
-
-
-
-
-
